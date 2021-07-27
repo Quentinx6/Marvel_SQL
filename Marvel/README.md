@@ -15,7 +15,7 @@ VOici la requete :
 
 ```sql
 
-SELECT first_name, last_name, birth_date FROM `actors` WHERE YEAR(birth_date) < 1991 ORDER BY last_name, first_name ASC
+SELECT first_name, last_name, (YEAR(NOW()) - YEAR(birth_date)) as age FROM `actors` WHERE YEAR(birth_date) < 1991 ORDER BY last_name, first_name ASC
 ````
 
 ## Afin d'afficher la liste des acteurs pour un film donné
