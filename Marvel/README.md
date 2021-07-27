@@ -35,3 +35,33 @@ Voici la requete :
 ```sql
 SELECT title, last_name, first_name FROM `linked` INNER JOIN movies ON linked.id_movie = movies.id INNER JOIN actors ON linked.id_actor = actors.id WHERE actors.first_name = 'Evans'
 ```
+
+## Afin d'ajouter un film
+
+```sql
+INSERT INTO movies VALUES ('0', ‘Avengers : ENDGAME’, 'Anthony et Joe Russo', ‘2019’, ‘0’3/01, NOW(), NOW())
+```
+
+## Afin d'ajouter un acteur 
+
+```sql
+INSERT INTO actors VALUES ('0', 'Holland', 'Tom', '1996-06-01', NOW(), NOW())
+````
+
+## Afin de modifier un film
+
+```sql
+UPDATE movies SET title = 'Avengers' WHERE id = 1
+```
+
+## Afin de supprimer un acteur 
+
+```sql
+DELETE FROM actors WHERE id = 8
+````
+
+## Afin d'afficher les 3 derniers acteurs ajoutés
+
+```sql
+SELECT * FROM `actors` ORDER BY id DESC LIMIT 3
+````
