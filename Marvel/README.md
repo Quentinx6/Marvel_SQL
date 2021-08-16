@@ -24,7 +24,7 @@ Voici la requete :
 
 ```sql
 
-SELECT title, last_name, first_name FROM `linked` INNER JOIN movies ON linked.id_movie = movies.id INNER JOIN actors ON linked.id_actor = actors.id WHERE movies.title = 'Avengers'
+SELECT movies.title,actors.first_name,actors.last_name FROM linked INNER JOIN movies ON linked.id_movie=movies.id INNER JOIN actors ON linked.id_actor=actors.id WHERE movies.title="Avengers"
 
 ```
 
@@ -33,13 +33,13 @@ SELECT title, last_name, first_name FROM `linked` INNER JOIN movies ON�
 Voici la requete :
 
 ```sql
-SELECT title, last_name, first_name FROM `linked` INNER JOIN movies ON linked.id_movie = movies.id INNER JOIN actors ON linked.id_actor = actors.id WHERE actors.first_name = 'Evans'
+SELECT movies.title,actors.first_name,actors.last_name FROM linked INNER JOIN movies ON linked.id_movie=movies.id INNER JOIN actors ON linked.id_actor=actors.id WHERE actors.first_name="Christopher"
 ```
 
 ## Afin d'ajouter un film
 
 ```sql
-INSERT INTO movies VALUES ('0', ‘Avengers : ENDGAME’, 'Anthony et Joe Russo', ‘2019’, ‘0’3/01, NOW(), NOW())
+INSERT INTO movies VALUES ('0', "Avengers : ENDGAME", "Anthony et Joe Russo", "2019", "3:01", NOW(), NOW())
 ```
 
 ## Afin d'ajouter un acteur 
