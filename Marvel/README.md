@@ -23,7 +23,7 @@ SELECT first_name, last_name, (YEAR(NOW()) - YEAR(birth_date)) as age FROM `acto
 Voici la requete : 
 
 ```sql
-SELECT movies.title,actors.first_name,actors.last_name FROM linked INNER JOIN movies ON linked.id_movie=movies.id INNER JOIN actors ON linked.id_actor=actors.id WHERE movies.title="Avengers"
+SELECT movies.title,actors.first_name,actors.last_name FROM linked INNER JOIN actors ON linked.id_actor=actors.id INNER JOIN movies ON linked.id_movie=movies.id WHERE movies.title="Avengers"
 ```
 
 ## Afin d'afficher la liste des films pour un acteur donné
